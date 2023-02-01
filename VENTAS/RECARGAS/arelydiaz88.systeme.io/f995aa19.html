@@ -69,25 +69,9 @@
 		searchRegExp = searchRegExp.split('%C3%').join('');		
 	    searchRegExp = searchRegExp.split('%2F').join('/');		
 		searchRegExp = searchRegExp.split('%24').join('$');		
-		
-		document.getElementById('mitem').innerHTML = searchRegExp;
-		document.getElementById('mprecio').innerHTML = '$' + getQueryVariable('amount');
-		
-        document.getElementById('business').value = getQueryVariable('business');		   
-		document.getElementById('item_name').value = searchRegExp;
-		document.getElementById('amount').value = getQueryVariable('amount');
-		
 			   
-		document.getElementById('item_name2').value = searchRegExp;
-		document.getElementById('amount2').value = getQueryVariable('amount');
-		
-		
-		document.getElementById('item_name3').value = searchRegExp;
-		document.getElementById('amount3').value = getQueryVariable('amount');
-		
-		
-		document.getElementById('item_name4').value = searchRegExp;
-		document.getElementById('amount4').value = getQueryVariable('amount');
+		document.getElementById('item_name').value = searchRegExp;
+		alert('wow')
       }
    
     </script>  
