@@ -195,10 +195,115 @@ html{box-sizing:border-box;-webkit-scroll-behavior:smooth;-moz-scroll-behavior:s
 	<tr>
 		<td>
         <input id="Monto" name="Monto" value="50" type="hidden" data-required="true" required>
-		<select name="Telcel" id="Telcel" style="width: 215px; font-size: 23px; display: none;" onchange="ElegirMonto(this.id);">
+	<select name="Telcel" id="Telcel" style="width: 215px; font-size: 23px; display: none;" onchange="ElegirMonto(this.id);">
         <option value="50">50</option>
 		<option value="50" selected="selected">50</option>
 		<option value="50">50</option>
+		</select>
+        <select name="PAQUETE_TELCEL_SL" id="PAQUETE_TELCEL_SL" style="width: 215px; font-size: 23px; display: none;" onchange="ElegirMonto(this.id);">
+        <option value="" selected="selected">[ monto ]</option>
+        <option value="SL50">50 - WA-Voz-SMS-Ilim/Redes/400MB/7d</option>
+        </select>
+        <select name="INT" id="INT" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+
+        <option value="" selected="selected">[ monto ]</option>
+        <option value="INT50">50 - 500MB/7D</option>		
+
+        </select>       
+        <select name="Monto_Movistar" id="Movistar" style="width: 215px; font-size: 23px; display: inline-block;" onchange="ElegirMonto(this.id);">
+         <option value="50" selected="selected">50</option>
+		<option value="50">50</option>
+
+		</select>
+
+            <select name="Monto_Movistar_Datos" id="Movistar_Datos" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+                <option value="" selected="selected">[ monto ]</option>
+                <option value="MD100">100</option>
+            </select>
+		<select name="Monto_ATT" id="ATT" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+         <option value="" selected="selected">[ monto ]</option>
+		<option value="50">50</option>
+		</select>
+		<select name="Monto_Unefon" id="Unefon" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+        <option value="" selected="selected">[ monto ]</option>
+		<option value="50">50</option>
+		</select>
+        <select name="Monto_Virgin" id="Virgin" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+        <option value="" selected="selected">[ monto ]</option>
+		<option value="50">50</option>
+
+		</select>
+
+        <select name="Monto_Tuenti" id="Tuenti" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+        <option value="" selected="selected">[ monto ]</option>
+        <option value="50">50</option>
+
+
+		</select>
+
+         <select name="Monto_MazTiempo" id="MazTiempo" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+        <option value="" selected="selected">[ monto ]</option>
+        <option value="50">50</option>
+
+		</select>
+        <select name="Monto_Flash" id="Flash" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+        <option value="" selected="selected">[ monto ]</option>
+		<option value="50">50</option>
+
+		</select>
+
+        <select name="Monto_Weex" id="Weex" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+        <option value="" selected="selected">[ monto ]</option>
+		<option value="50">50</option>
+		</select>
+
+        <select name="Monto_Oui" id="Oui" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+
+        <option value="" selected="selected">[ monto ]</option>
+		<option value="50">50</option>
+		</select>
+
+ 	 <select id="Bait_tiempo_aire" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+
+        <option value="" selected="selected">[ monto ]</option>
+
+		<option value="bait50">50</option>
+
+		</select>
+
+ <select id="Bait_paquete" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+
+        <option value="" selected="selected">[ monto ]</option>
+
+		<option value="baitp550">550</option>
+		<option value="baitp800">800</option>
+		<option value="baitp1050">1050</option>
+		<option value="baitp1500">1500</option>
+		<option value="baitp2000">2000</option>
+		<option value="baitp2900">2900</option>
+
+		</select>
+	 <select id="Bait_internet_en_casa" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+
+        <option value="" selected="selected">[ monto ]</option>
+		<option value="baiti89">89</option>
+		<option value="baiti329">329</option>
+		</select>
+ <select id="Mi_Movil" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+
+        <option value="" selected="selected">[ monto ]</option>
+		<option value="mimovil50">50</option>
+		<option value="mimovil65">65</option>
+		<option value="mimovil100">100</option>
+		<option value="mimovil125">125</option>
+		<option value="mimovil200">200</option>
+		<option value="mimovil300">300</option>
+
+		</select>
+	 <select id="Pillofon" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+        <option value="" selected="selected">[ monto ]</option>
+		<option value="baiti89">89</option>
+		<option value="baiti329">329</option>
 		</select>
        
 	   
