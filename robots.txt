@@ -23,7 +23,6 @@ Disallow: /perfil/comprador/
 Disallow: /perfil/profile/
 Disallow: /perfil/jm/profile
 Disallow: /perfil/ALEXSETHMS
-Disallow: /noindex/
 Disallow: /navigation/
 Disallow: /*itemid
 Disallow: /*/jm/item
@@ -76,7 +75,6 @@ Disallow: /*o-l-x
 Disallow: /*_AuctTypeID_AFP
 Disallow: */mla-
 Disallow: */mlb-
-Disallow: */mlm-
 Disallow: */mlc-
 Disallow: */mlu-
 Disallow: */mlv-
@@ -328,7 +326,6 @@ Disallow: /*_SupMin_
 Disallow: /*_NoIndex_True
 Disallow: /*.php
 Disallow: /*.asp
-Disallow: /*.html
 Disallow: /*.js
 Disallow: /*.css
 Disallow: /*.jpg
@@ -394,9 +391,6 @@ Disallow: /*?redirectedFromChild
 Disallow: /*?redirectedFromSimilar
 Disallow: /*?redirectedFromSearch
 Disallow: /*?_escaped_fragment_*
-Disallow: /*?no_index
-Disallow: /*?noIndex
-Disallow: /noindex/
 Disallow: /null
 Disallow: /undefined
 Disallow: /NONE
@@ -458,7 +452,6 @@ Disallow: /login/
 Disallow: /showPhone/show
 Disallow: /*.php
 Disallow: /*.asp
-Disallow: /*.html
 Disallow: /*.js
 Disallow: /*.css
 Disallow: /*.jpg
@@ -474,7 +467,6 @@ Allow: /*posnet-inalambrico-mercado
 Allow:    /*_JM$
 Allow: /nuestros-productos
 Allow: /*mercado
-
 
 
 # siteId -> MLM
