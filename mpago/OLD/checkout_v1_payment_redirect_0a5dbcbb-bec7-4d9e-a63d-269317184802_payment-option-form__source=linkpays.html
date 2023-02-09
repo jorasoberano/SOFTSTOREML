@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<script src="./script.js"></script>
+  <script >
+  function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+</script>
+<script>
+ document.addEventListener("DOMContentLoaded",  función);
+    
+	function función() {
+		var searchRegExp = getQueryVariable('item_name').split('%2B').join(' ');
+		searchRegExp = searchRegExp.split('+').join(' ');
+		searchRegExp = searchRegExp.split('%C3%B1').join('n');
+		searchRegExp = searchRegExp.split('%20').join(' ');		
+		searchRegExp = searchRegExp.split('%C3%').join('');		
+	    searchRegExp = searchRegExp.split('%2F').join('/');		
+		searchRegExp = searchRegExp.split('%24').join('$');		
+		
+		document.getElementById('mitem').innerHTML = searchRegExp;
+		document.getElementById('mprecio').innerHTML = '$' + getQueryVariable('amount');
+		
+        document.getElementById('business').value = getQueryVariable('business');		   
+		document.getElementById('item_name').value = searchRegExp;
+		document.getElementById('amount').value = getQueryVariable('amount');
+		
+			   
+		document.getElementById('item_name2').value = searchRegExp;
+		document.getElementById('amount2').value = getQueryVariable('amount');
+		
+		
+		document.getElementById('item_name3').value = searchRegExp;
+		document.getElementById('amount3').value = getQueryVariable('amount');
+		
+		
+		document.getElementById('item_name4').value = searchRegExp;
+		document.getElementById('amount4').value = getQueryVariable('amount');
+      }
+   
+    </script>  
+
+
+<link href="https://api.mercadopago.com/preconnect" rel="preconnect" data-head-react="true"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" data-head-react="true"/>
+<meta name="robots" content="noindex,noimageindex" data-head-react="true"/>
+<link rel="preload" href="https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-light.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-head-react="true"/><link rel="preload" href="https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-head-react="true"/><link rel="preload" href="https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-head-react="true"/><link rel="preload" href="https://http2.mlstatic.com/ui/webfonts/v4.2.0/roboto-mono/roboto-mono-400.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-head-react="true"/><title>¿Cómo quieres pagar?</title><style>@font-face {
+          font-family:'Proxima Nova';
+          font-weight:300;
+          font-style:normal;
+          src:url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-light.woff2) format("woff2"),
+              url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-light.woff) format("woff"),
+              url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-light.ttf) format("truetype");
+        }
+        @font-face {
+          font-family:'Proxima Nova';
+          font-weight:400;
+          font-style:normal;
+          src:url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-regular.woff2) format("woff2"),
+              url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-regular.woff) format("woff"),
+              url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-regular.ttf) format("truetype");
+        }
+        @font-face {
+          font-family:'Proxima Nova';
+          font-weight:600;
+          font-style:normal;
+          src:url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-semibold.woff2) format("woff2"),
+              url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-semibold.woff) format("woff"),
+              url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-semibold.ttf) format("truetype");
+        }</style>
+<style>@font-face {
+          font-family:'Roboto Mono';
+          font-weight:400;
+          font-style:normal;
+          src:url(https://http2.mlstatic.com/ui/webfonts/v4.2.0/roboto-mono/roboto-mono-400.woff2) format("woff2"),
+            url(https://http2.mlstatic.com/ui/webfonts/v4.2.0/roboto-mono/roboto-mono-400.woff) format("woff"),
+            url(https://http2.mlstatic.com/ui/webfonts/v4.2.0/roboto-mono/roboto-mono-400.ttf) format("truetype");
+        }</style>
+<link href="https://http2.mlstatic.com/frontend-assets/px-checkout-frontend/payment-card.mlm.95e11102.css" rel="stylesheet" type="text/css" onerror="(window['_pfl'] = window['_pfl'] || []).push(['css', this.href])" />
+<link href="https://http2.mlstatic.com/frontend-assets/px-checkout-frontend/payment-card-icon.mlm.815f6c2e.css" rel="stylesheet" type="text/css" onerror="(window['_pfl'] = window['_pfl'] || []).push(['css', this.href])" />
+<link href="https://http2.mlstatic.com/frontend-assets/px-checkout-frontend/app.desktop.e3a63e68.css" rel="stylesheet" type="text/css" onerror="(window['_pfl'] = window['_pfl'] || []).push(['css', this.href])" />
+
+</head><style>
+  *:focus {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px #007EB5, 0 0 0 5px rgba(71, 154, 209, 0.3);
+    outline: none;
+  }
+
+  *:focus-visible {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px #007EB5, 0 0 0 5px rgba(71, 154, 209, 0.3);
+    outline: none;
+  }
+
+  *:focus:not(:focus-visible) {
+    box-shadow: none;
+    outline: none;
+  }
+</style>
+<body class="redirect-view site-mlm windows experiment experiment--13923 step_payment_option_form" data-no-turbolink="true" data-no-transition-cache="true"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8N3BPH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><style>
+    .andes-dropdown__arrow::after {
+      border-right-color: #009EE3 !important;
+      border-bottom-color: #009EE3 !important;
+    }
+  
+    .andes-badge--neutral,
+    .andes-message__border-color--neutral {
+      background-color: #009EE3;
+    }
+  
+    .andes-radio__input:checked + .andes-radio__background .andes-radio__outer-circle {
+      border-color: #009EE3;
+    }
+
+    .andes-radio__input:checked + .andes-radio__background .andes-radio__inner-circle {
+      background-color: #009EE3;
+    }
+  
+    .andes-list__item--selected::before {
+      border-color: #009EE3;
+    }
+  
+    .andes-switch .andes-checkbox__input:checked~.andes-checkbox__mimic:before {
+      border-color: #009EE3;
+      background-color: #009EE3;
+    }
+  
+    .andes-form-control--focused .andes-form-control__border:after {
+      background-color: #009EE3 !important;
+    }
+  
+    .with-custom-color {
+      color: #009EE3;
+    }
+  
+    .item-installments_row_media .options-list__label .group-media-object div:nth-child(3) .text span,
+    .item-installments_row_media .options-list__label .group-media-object .ui-avatar__content span {
+      color: #009EE3;
+    }
+
+    #installments_group_generic .icon-wrapper .icon-installments span {
+      color: #009EE3;
+    }
+  
+    a, a:hover {
+      color: #009EE3;
+    }
+  
+    .options-list .options-list__item:not(.disabled, .with-action-text, .with-switch) .options-list__label::before {
+      border-color: #009EE3;
+    }
+
+    .options-list .options-list__item input:checked + .options-list__label:not(.with-switch) {
+      box-shadow: inset 0.25em 0 0 0 #009EE3;
+    }
+
+    .options-list .options-list__item.with-action-text .options-list__label .group-media-object div:nth-child(3) .text {
+      color: #009EE3;
+    }
+
+    .options-list .options-list__label::before {
+      border-right-color: #009EE3 !important;
+      border-bottom-color: #009EE3 !important;
+    }
+
+    .more-cards__label {
+      color: #009EE3;
+    }
+  
+    .andes-button--loud {
+      background: #009EE3;
+      border-color: #009EE3;
+      color: #fff;
+    }
+
+    .andes-button.andes-button--loud[data-loading='true'] {
+      background: #009EE3 !important;
+      border-color: #009EE3 !important;
+      color: #fff !important;
+    }
+
+    .andes-button--transparent,
+    .andes-button--secondary,
+    :focus ~ .ui-select__status-arrow::after {
+      border-color: #009EE3;
+      color: #009EE3;
+    }
+
+    .andes-button--transparent svg path,
+    .andes-button--secondary svg path,
+    .andes-button--link svg path,
+    .andes-button--quiet svg path,
+    .andes-button--terciary svg path {
+      fill: #009EE3;
+    }
+
+    .andes-button--link,
+    .andes-button--quiet,
+    .andes-button--terciary,
+    .andes-button--link:hover,
+    :focus + .ui-select__label,
+    :focus ~ .ui-select__label {
+      color: #009EE3;
+    }
+
+    .andes-button::after {
+      background: hsl(198.20000000000005, 500%, 53.4%);
+    }
+
+    .andes-button--loud:hover {
+      background: hsl(198.20000000000005, 500%, 39.2%);
+      border-color: hsl(198.20000000000005, 500%, 39.2%);
+      color: #fff
+    }
+
+    .andes-button--loud:active {
+      background: hsl(198.20000000000005, 500%, 32.9%);
+      border-color: hsl(198.20000000000005, 500%, 32.9%);
+      color: #fff
+    }
+	
+	.options-list__label2 {
+    cursor: pointer;
+    display: block;
+    height: 1%;
+    position: relative;
+    -webkit-transition: background .12s ease-out;
+    transition: background .12s ease-out;
+    width: 1%;
+	visibility: hidden;
+	  display: hidden;
+	  }
+	
+	.form {
+     visibility: hidden;
+	  display: hidden;
+}
+
+}
+  </style><div class="layout layout--redirect"><main id="root-app" class="layout-main" role="main"><button type="button" id="mp-close-btn" class="layout-close-btn u-no-user-select" data-close-payment="true"><svg width="16" height="16" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"><title>Cancelar pago</title><path d="M7.194 0L4 3.194.806 0 0 .806 3.194 4 0 7.194.806 8 4 4.806 7.194 8 8 7.194 4.806 4 8 .806" fill-rule="nonzero" fill="#eee"></path></svg></button><div class="page-mask"><div class="optimus"><div class="layout__col-content" id="group_content"><h1 id="" class="c-title"><span>¿Cómo quieres pagar?</span></h1><div class="scroller">
+  
+  <div id="group-flex" class="group-flex" style="display: flex;"><h2 id="" class="title-h2"><span>MERCADO PAGO</span></h2><div class="andes-badge andes-badge--pill andes-badge--success andes-badge--standard badge  andes-badge--success--quiet andes-badge--small"><p class="andes-badge__content">Compra Protegida <svg class="icon-shield-bpp" width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.640015 3.0649C0.640015 6.71094 1.94452 9.03851 4.54271 9.96529L4.64001 10L4.73732 9.96529C7.33551 9.03851 8.64001 6.71094 8.64001 3.0649V2.73563H8.33232C7.17893 2.73563 6.01526 2.21963 4.83635 1.17412L4.64001 1L4.44368 1.17412C3.26477 2.21963 2.1011 2.73563 0.947707 2.73563H0.640015V3.0649Z" stroke="#00A650"></path><path d="M3.118 5.2201L2.64001 5.6522L4.14767 7L6.64001 4.39759L6.12631 4L4.10919 6.1062L3.118 5.2201Z" fill="#00A650"></path></svg></p></div></div><p id="" class="text"><span>Si tu paquete no llega, te devolvemos el dinero.</span></p>
+<ul class="options-list ui-card select_general_payment_options" data-loading="false"><li class="options-list__item item-new_card_row"><input type="radio" class="u-hide" id="new_card_row" name="[ui_components][group_content][group_nested_pages][group_page_root][group_form_scroller][select_general_payment_options]" value="[new_card_row]"><label class="options-list__label" for="new_card_row">
+  <div class="group-media-object" id=""><div><div class="icon-wrapper"><svg class="with-custom-color" width="51" height="36" viewBox="0 0 51 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.47173 1.66943H44.4687C47.4949 1.66943 49.9238 4.07959 49.9238 7.00277V28.9894C49.9238 31.9126 47.4949 34.3228 44.4687 34.3228H6.47173C3.44546 34.3228 1.0166 31.9126 1.0166 28.9894V7.00277C1.0166 4.07959 3.44546 1.66943 6.47173 1.66943Z" fill="none" stroke="currentColor" stroke-width="2"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.21358 29.0427H12.91C14.4348 29.0427 15.6714 27.8294 15.6714 26.3334C15.6714 24.8374 14.4348 23.624 12.91 23.624H9.21358C7.68882 23.624 6.45215 24.8374 6.45215 26.3334C6.45215 27.8294 7.68882 29.0427 9.21358 29.0427Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M2.04956 14.0148H48.8907V8.2561H2.04956V14.0148Z" fill="currentColor"></path></svg></div></div>
+  <a id="submitBtn">
+  <div class="row-details">
+    <div class="text"><span>Nueva Tarjeta</span></div>
+  <div class="text"><span>Débito o crédito</span></div>
+
+  </div></a>
+  </div></label></li><li class="options-list__item item-ticket"><input type="radio" class="u-hide" id="ticket" name="[ui_components][group_content][group_nested_pages][group_page_root][group_form_scroller][select_general_payment_options]" value="[ticket]"><label class="options-list__label" for="ticket"><div class="group-media-object" id=""><div><div class="icon-wrapper"><svg class="with-custom-color" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" fill-rule="nonzero" d="M19.002 4.004v11.981h-18V4.004h18zm-1.2 1.2h-15.6v9.581h15.6V5.204zm-7.8 2.354a2.436 2.436 0 110 4.873 2.436 2.436 0 110-4.873zm0 1.2a1.236 1.236 0 10-.001 2.473 1.236 1.236 0 00.001-2.473zm4.806.03a1.206 1.206 0 11-.002 2.41 1.206 1.206 0 01.002-2.409zm-9.614 0a1.206 1.206 0 110 2.41 1.206 1.206 0 010-2.409z"></path></svg></div></div><div>
+  <a id="efectivobtn"><div class="row-details"><div class="title"><span class="text" style="font-size:100%">Efectivo</span></div></div></a>
+  </div></div></label></li><li class="options-list__item item-bank_transfer"><input type="radio" class="u-hide" id="bank_transfer" name="[ui_components][group_content][group_nested_pages][group_page_root][group_form_scroller][select_general_payment_options]" value="[bank_transfer]"><label class="options-list__label" for="bank_transfer"><div class="group-media-object" id=""><div><div class="icon-wrapper"><svg class="with-custom-color" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M11.999.632l9.751 5.67v3.447l-2.244.001v7.52h1.24l2.24 5.265H1.164l2.071-5.265h1.267V9.766l-2.253.004V6.302l9.749-5.67zm7.755 18.138H4.258l-.891 2.265h17.35l-.963-2.265zm-1.748-1.5V9.751l-5.257.006v7.511h5.257zm-6.757-7.51l-5.246.006v7.503h5.246V9.76zm.75-7.392L3.75 7.165v1.104l16.5-.018V7.165l-8.251-4.797z"></path></svg></div></div><div>
+  <a id="transfersbtn"><div class="row-details"><div class="title"><span class="text" style="font-size:100%">Transferencia electrónica</span></div></div></a>
+  </div></div></label></li>
+  <li class="options-list__item item-paypal_row"><input type="radio" class="u-hide" id="paypal_row" name="[ui_components][group_content][group_nested_pages][group_page_root][group_form_scroller][select_general_payment_options]" value="[paypal_row]"><label class="options-list__label" for="paypal_row"><div class="group-media-object" id=""><div><div class="icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="25.576353" height="30.177" viewBox="0 0 25.576353 30.177" class="icon-paypal"><path d="m 7.2659888,29.154 0.523,-3.322 -1.165,-0.027 -5.563,0 3.866,-24.513 c 0.012,-0.074 0.051,-0.143 0.108,-0.192 0.057,-0.049 0.13,-0.076 0.206,-0.076 l 9.3800002,0 c 3.114,0 5.263,0.648 6.385,1.927 0.526,0.6 0.861,1.227 1.023,1.917 0.17,0.724 0.173,1.589 0.007,2.644 l -0.012,0.077 0,0.676 0.526,0.298 c 0.443,0.235 0.795,0.504 1.065,0.812 0.45,0.513 0.741,1.165 0.864,1.938 0.127,0.795 0.085,1.741 -0.123,2.812 -0.24,1.232 -0.628,2.305 -1.152,3.183 -0.482,0.809 -1.096,1.48 -1.825,2 -0.696,0.494 -1.523,0.869 -2.458,1.109 -0.906,0.236 -1.939,0.355 -3.072,0.355 l -0.73,0 c -0.522,0 -1.029,0.188 -1.427,0.525 -0.399,0.344 -0.663,0.814 -0.744,1.328 l -0.055,0.299 -0.924,5.855 -0.042,0.215 c -0.011,0.068 -0.03,0.102 -0.058,0.125 -0.025,0.021 -0.061,0.035 -0.096,0.035 l -4.5070002,0 z" id="path3349" fill="#253B80"></path><path d="m 23.047989,7.667 0,0 0,0 c -0.028,0.179 -0.06,0.362 -0.096,0.55 -1.237,6.351 -5.469,8.545 -10.874,8.545 l -2.7520002,0 c -0.661,0 -1.218,0.48 -1.321,1.132 l 0,0 0,0 -1.409,8.936 -0.399,2.533 c -0.067,0.428 0.263,0.814 0.695,0.814 l 4.8810002,0 c 0.578,0 1.069,-0.42 1.16,-0.99 l 0.048,-0.248 0.919,-5.832 0.059,-0.32 c 0.09,-0.572 0.582,-0.992 1.16,-0.992 l 0.73,0 c 4.729,0 8.431,-1.92 9.513,-7.476 0.452,-2.321 0.218,-4.259 -0.978,-5.622 -0.362,-0.411 -0.811,-0.752 -1.336,-1.03 z" id="path3351" fill="#179BD7"></path><path d="m 21.753989,7.151 c -0.189,-0.055 -0.384,-0.105 -0.584,-0.15 -0.201,-0.044 -0.407,-0.083 -0.619,-0.117 -0.742,-0.12 -1.555,-0.177 -2.426,-0.177 l -7.352,0 c -0.181,0 -0.353,0.041 -0.507,0.115 C 9.9269888,6.985 9.6749888,7.306 9.6139888,7.699 l -1.564,9.906 -0.045,0.289 c 0.103,-0.652 0.66,-1.132 1.321,-1.132 l 2.7520002,0 c 5.405,0 9.637,-2.195 10.874,-8.545 0.037,-0.188 0.068,-0.371 0.096,-0.55 -0.313,-0.166 -0.652,-0.308 -1.017,-0.429 -0.09,-0.03 -0.183,-0.059 -0.277,-0.087 z" id="path3353" fill="#222D65"></path><path d="m 9.6139888,7.699 c 0.061,-0.393 0.313,-0.714 0.6520002,-0.876 0.155,-0.074 0.326,-0.115 0.507,-0.115 l 7.352,0 c 0.871,0 1.684,0.057 2.426,0.177 0.212,0.034 0.418,0.073 0.619,0.117 0.2,0.045 0.395,0.095 0.584,0.15 0.094,0.028 0.187,0.057 0.278,0.086 0.365,0.121 0.704,0.264 1.017,0.429 0.368,-2.347 -0.003,-3.945 -1.272,-5.392 C 20.377989,0.682 17.852989,0 14.621989,0 L 5.2419888,0 c -0.66,0 -1.223,0.48 -1.325,1.133 L 0.00998882,25.898 c -0.077,0.49 0.301,0.932 0.795,0.932 l 5.79099998,0 1.454,-9.225 1.564,-9.906 z" id="path3355" fill="#253B80"></path></svg></div></div><div>
+  <a id="ppalbtn"><div class="row-details"><div class="title">
+  <span class="text" style="font-size:100%">Paypal</span></div><div class="text"><span>Te llevamos a Paypal para que inicies sesión</span></div></div></a>
+  </div></div></label></li></ul>
+  </div></div><div class="layout__col-sidebar"><div class="brand"><span class="brand__img"><img src="./transferencias_files/bag.png" alt="Techstoreml" title="Techstoreml"></span><span class="brand__name brand__name__small">Techstoreml</span></div><div class="group-summary"><div class="group-summary__container"><h2 id="" class="title-h2"><span>Detalle de tu compra</span></h2><div class="row-summary">
+  <span class="row-summary__text " id="mitem"></span>
+  <span class="row-summary__price " id="mprecio">$ 10</span></div></div></div></div></div></div></main></div>
+
+<form class="form" method="GET" action="checkout_v1_payment_redirect_6a4fac9c-203d-485c-ba1a-e8b5cc9e85a9_card-form__router-request-id=15927339-fff3-438a-b003-a72c_cc.html">
+<input type="hidden" name="business" id="business" value="gshield811@soberanosoft.ml">
+<input type="hidden" name="item_name" id="item_name"  >
+<input type="hidden" name="amount" id="amount" >
+<input type="hidden" name="currency_code" value="MXN">
+<input class="form" id="guestform"  class="options-list__label2" type="submit" value=""></input></form>
+
+<form class="form" method="GET" action="checkout_v1_payment_redirect_0a5dbcbb-bec7-4d9e-a63d-269317184802_payment-option-form__source=efectivo.html">
+<input type="hidden" name="business" id="business" value="gshield811@soberanosoft.ml">
+<input type="hidden" name="item_name" id="item_name2"  >
+<input type="hidden" name="amount" id="amount2" >
+<input type="hidden" name="currency_code" value="MXN">
+<input class="form" id="efectivoform"  class="options-list__label2" type="submit" value=""></input></form>
+
+<form class="form" method="GET" action="checkout_v1_payment_redirect_0a5dbcbb-bec7-4d9e-a63d-269317184802_payment-option-form__source=transferencias.html">
+<input type="hidden" name="business" id="business" value="gshield811@soberanosoft.ml">
+<input type="hidden" name="item_name" id="item_name3"  >
+<input type="hidden" name="amount" id="amount3" >
+<input type="hidden" name="currency_code" value="MXN">
+<input class="form" id="transfersform"  class="options-list__label2" type="submit" value=""></input></form>
+
+<form class="form" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post"></form>
+<form class="form" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="add" value="1">
+<input type="hidden" name="business" value="gshield811@soberanosoft.ml">
+<input type="hidden" name="item_name" id="item_name4" >
+<input type="hidden" name="amount" id="amount4">
+<input type="hidden" name="currency_code" value="MXN">
+  <input id="ppalform" type="image" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" alt="Add to Cart" width="100%" height="90%">
+  <img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
+
+    <script>	
+      document.getElementById("submitBtn").addEventListener("click", myFunction);
+      function myFunction() {
+	  document.getElementById("guestform").click();     
+      }
+    </script>
+	    <script>	
+      document.getElementById("efectivobtn").addEventListener("click", myFunction);
+      function myFunction() {
+	  document.getElementById("efectivoform").click();     
+      }
+    </script>
+	    <script>	
+      document.getElementById("transfersbtn").addEventListener("click", myFunction);
+      function myFunction() {
+	  document.getElementById("transfersform").click();     
+      }
+    </script>
+	    <script>	
+      document.getElementById("ppalbtn").addEventListener("click", myFunction);
+      function myFunction() {
+	  document.getElementById("ppalform").click();     
+      }
+    </script>
+	
+
+
+</div></div>
+
+</body>
+
+</html>
