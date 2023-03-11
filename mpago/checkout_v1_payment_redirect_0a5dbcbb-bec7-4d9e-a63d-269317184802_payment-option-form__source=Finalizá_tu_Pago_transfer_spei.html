@@ -22,8 +22,8 @@
     
 	function función() {
 		var str1 = '<br/>';
-		document.getElementById('mprecio').innerHTML = '$' + getQueryVariable('amount');
-		document.getElementById('mprecio2').innerHTML = '$' + getQueryVariable('amount');
+		document.getElementById('mprecio').innerHTML = '$' + getQueryVariable('currency_code') + getQueryVariable('amount');
+		document.getElementById('mprecio2').innerHTML = '$' + getQueryVariable('currency_code') + getQueryVariable('amount');		
       }
    
     </script>  

@@ -33,8 +33,9 @@
 		searchRegExp = searchRegExp.split('%20').join(' ');
 		document.getElementById('mitem').innerHTML = searchRegExp;
 		
-		document.getElementById('mprecio').innerHTML = '$' + getQueryVariable('amount');
-		document.getElementById('mprecio2').innerHTML = '$' + getQueryVariable('amount');
+		document.getElementById('mprecio').innerHTML = '$' + getQueryVariable('currency_code') + getQueryVariable('amount');
+		document.getElementById('mprecio2').innerHTML = '$' + getQueryVariable('currency_code') + getQueryVariable('amount');
+		
 		document.getElementById('micc').innerHTML = 'Tarjeta Terminada En ' + getQueryVariable('micc');
 		
 		 document.getElementById('business').value = getQueryVariable('business');		   
