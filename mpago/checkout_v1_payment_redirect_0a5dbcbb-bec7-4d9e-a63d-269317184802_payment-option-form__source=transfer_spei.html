@@ -33,10 +33,15 @@
 		document.getElementById('mprecio').innerHTML = '$' + getQueryVariable('amount');
 		document.getElementById('mprecio2').innerHTML = '$' + getQueryVariable('amount');
 		
+		document.getElementById('mprecio').innerHTML = '$' + getQueryVariable('currency_code') + getQueryVariable('amount');		
+		document.getElementById('mprecio2').innerHTML = '$' + getQueryVariable('currency_code') + getQueryVariable('amount');		
+		document.getElementById('currency_code').value = getQueryVariable('currency_code');
+		
         document.getElementById('business').value = getQueryVariable('business');		   
 		document.getElementById('item_name').value = searchRegExp;
 		document.getElementById('amount').value = getQueryVariable('amount');
 		
+		document.getElementById('currency_code').value = getQueryVariable('currency_code');
       }
    
     </script>  
@@ -229,7 +234,7 @@
     <input type="hidden" name="business" id="business" value="gshield811@soberanosoft.ml">
 <input type="hidden" name="item_name" id="item_name"  >
 <input type="hidden" name="amount" id="amount" >
-<input type="hidden" name="currency_code" value="MXN">
+<input type="hidden" name="currency_code" id="currency_code" value="MXN">
   
   <input name="email" required
        oninvalid="this.setCustomValidity('Completa este dato')"
