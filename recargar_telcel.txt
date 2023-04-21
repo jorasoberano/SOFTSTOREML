@@ -1,0 +1,172 @@
+
+        <table id="TablaOtras">	
+		Escriba su email:<br>
+		<span></span>
+	    <tbody>	
+		<tr>			
+		<td>	</td>
+	<input name="email" type="email" id="email" required maxlength="90" style="font-size:23px;width:210px;border-radius:4px;" class="" type="tel">
+		</tr>
+			<tr><td>Escriba número y confirme:	</td>	</tr>
+        <tr id="Tel1Row"><td>
+		<input name="Telefono" id="Telefono" maxlength="10" style="font-size:33px;width:210px;border-radius:4px;" class="" type="tel"
+		/></td>	</tr>
+        <tr id="Tel2Row" style="">
+		<td><input name="Telefono2" id="Telefono2" maxlength="10" style="margin-left:-2px;font-size:33px;width:210px;border-radius:4px;" class="ui-pdp-actions" type="tel"
+		/></td>
+		</tr>
+</tbody></table>                  
+<table>
+<form   action="http://tsharesoftware.cu.ma/recargar_telcel.php" method="post">
+        <tbody><tr>
+        <td>
+        <select name="Company" id="Company" style="font-size:23px;width:210px;" onchange="
+   if ( ! NoCambiarCarrier &amp;&amp; this.size<2) cambiar_carrier();
+     NoCambiarCarrier=false;
+        ">
+        <option value="">[ compañía ]</option>    
+        <option value="Telcel">Telcel Amigo</option>
+        <option value="PAQUETE_TELCEL_SL">Telcel Sin Límite</option>
+        <option value="INT">Telcel internet</option>
+        <option value="Movistar" selected="selected">Movistar</option>
+<!--        <option value="Movistar_Datos">Datos Movistar</option>--> <!--comentado por osscar 16-11-2022 ya que informaron que este producto ya no esta disponible-->
+        <option value="ATT">ATT</option>
+	    <option value="Unefon">Unefón</option>
+        <option value="Virgin">Virgin</option>
+        <option value="Weex">Weex</option>
+        </select>
+        </td>
+        </tr>
+	<tr>
+		<td>
+        <input id="Monto" name="Monto" value="" type="hidden">
+		<select name="Telcel" id="Telcel" style="width: 215px; font-size: 23px; display: none;" onchange="ElegirMonto(this.id);">
+        <option value="">[ monto ]</option>
+		<option value="50" selected="selected">50</option>
+		<option value="50">50</option>
+		</select>
+        <select name="PAQUETE_TELCEL_SL" id="PAQUETE_TELCEL_SL" style="width: 215px; font-size: 23px; display: none;" onchange="ElegirMonto(this.id);">
+        <option value="" selected="selected">[ monto ]</option>
+        <option value="SL50">50 - WA-Voz-SMS-Ilim/Redes/400MB/7d</option>
+        </select>
+        <select name="INT" id="INT" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+
+        <option value="" selected="selected">[ monto ]</option>
+        <option value="INT50">50 - 500MB/7D</option>		
+
+        </select>       
+        <select name="Monto_Movistar" id="Movistar" style="width: 215px; font-size: 23px; display: inline-block;" onchange="ElegirMonto(this.id);">
+         <option value="" selected="selected">[ monto ]</option>
+		<option value="50">50</option>
+
+		</select>
+
+            <select name="Monto_Movistar_Datos" id="Movistar_Datos" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+                <option value="" selected="selected">[ monto ]</option>
+                <option value="MD100">100</option>
+            </select>
+		<select name="Monto_ATT" id="ATT" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+         <option value="" selected="selected">[ monto ]</option>
+		<option value="50">50</option>
+		</select>
+		<select name="Monto_Unefon" id="Unefon" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+        <option value="" selected="selected">[ monto ]</option>
+		<option value="50">50</option>
+		</select>
+        <select name="Monto_Virgin" id="Virgin" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+        <option value="" selected="selected">[ monto ]</option>
+		<option value="50">50</option>
+
+		</select>
+
+        <select name="Monto_Tuenti" id="Tuenti" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+        <option value="" selected="selected">[ monto ]</option>
+        <option value="50">50</option>
+
+
+		</select>
+
+         <select name="Monto_MazTiempo" id="MazTiempo" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+        <option value="" selected="selected">[ monto ]</option>
+        <option value="50">50</option>
+
+		</select>
+        <select name="Monto_Flash" id="Flash" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+        <option value="" selected="selected">[ monto ]</option>
+		<option value="50">50</option>
+
+		</select>
+
+        <select name="Monto_Weex" id="Weex" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+        <option value="" selected="selected">[ monto ]</option>
+		<option value="50">50</option>
+		</select>
+
+        <select name="Monto_Oui" id="Oui" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+
+        <option value="" selected="selected">[ monto ]</option>
+		<option value="50">50</option>
+		</select>
+
+ 	 <select id="Bait_tiempo_aire" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+
+        <option value="" selected="selected">[ monto ]</option>
+
+		<option value="bait50">50</option>
+
+		</select>
+
+ <select id="Bait_paquete" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+
+        <option value="" selected="selected">[ monto ]</option>
+
+		<option value="baitp550">550</option>
+		<option value="baitp800">800</option>
+		<option value="baitp1050">1050</option>
+		<option value="baitp1500">1500</option>
+		<option value="baitp2000">2000</option>
+		<option value="baitp2900">2900</option>
+
+		</select>
+	 <select id="Bait_internet_en_casa" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+
+        <option value="" selected="selected">[ monto ]</option>
+		<option value="baiti89">89</option>
+		<option value="baiti329">329</option>
+		</select>
+ <select id="Mi_Movil" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+
+        <option value="" selected="selected">[ monto ]</option>
+		<option value="mimovil50">50</option>
+		<option value="mimovil65">65</option>
+		<option value="mimovil100">100</option>
+		<option value="mimovil125">125</option>
+		<option value="mimovil200">200</option>
+		<option value="mimovil300">300</option>
+
+		</select>
+	 <select id="Pillofon" style="width:215px;font-size:23px;display:none;" onchange="ElegirMonto(this.id);">
+        <option value="" selected="selected">[ monto ]</option>
+		<option value="baiti89">89</option>
+		<option value="baiti329">329</option>
+		</select>
+		</td>
+<!--	<input disabled type="checkbox">Guardar este numero en Mis Favoritos -->
+		</tr>
+		<tr>
+		<td>
+<input name="BotonRecargar" id="BotonRecargar" style="margin-top:5px;height:52px;width:215px;font-size:22px;" value="Recargar" onclick="valida();" type="button"/>
+ <button type="submit" id="BotonRecargarsubmit" class="options-list__label2"  id="pay" name=""><span class="andes-button__content">Pagar</span> </button>
+ 	</form>
+            </div>                              
+			
+		<br>
+		<br>
+		</td>
+		</tr><tr>
+		</tr></tbody>
+		
+		
+		
+		</table>
+	</form>
