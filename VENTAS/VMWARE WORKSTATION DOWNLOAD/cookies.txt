@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+arelydiaz88.systeme.io	TRUE	/	FALSE	1999999999	v	7f26d66ea07236170b038397354d727a323a98743f640494def46104a126ca9a
+arelydiaz88.systeme.io	TRUE	/	FALSE	1999999999	samesite	none
+.systeme.io	TRUE	/	FALSE	1999999999	si	deleted
+
