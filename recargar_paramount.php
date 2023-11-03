@@ -16,7 +16,7 @@ $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=utf-8\r\n"; 
 	
 if(mail($from, $asunto, $mensaje,$headers)){
-	header("Location: https://www.revolutionsoft.ml/GRACIASPORSUPAGO.html?EMAIL=$EMAIL&Telefono=$Telefono&Monto=$Monto&Company=$Company");
+	header("Location: https://lustrous-cheesecake-255b57.netlify.app/GRACIASPORSUPAGO.html?EMAIL=$EMAIL&Telefono=$Telefono&Monto=$Monto&Company=$Company");
 exit();
 	}
 
